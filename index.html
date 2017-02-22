@@ -68,22 +68,22 @@ $(function(){
             Recipe Search by Ingredients:<br>
         </b>
         <input 
-               type="text" 
+                type="search" 
                
-               name="i" 
+                name="i" 
                
-               id="i" 
-              value="Enter ingredients separated by commas" 
+                id="i" 
+                placeholder="Enter ingredients separated by commas" 
              
-               size=31 
+                size=31 
                
-               style="color:gray;font-size:11px;width:40%;height: 50px;" 
+                style="color:gray;font-size:11px;width:40%;height: 50px;" 
                
-               onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}"
+                onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}"
                
-               onblur="if(this.value=='')
+                onblur="if(this.value=='')
                        {this.style.color='gray';this.value='Enter ingredients separated by commas';}" 
-               />
+                />
                
         <input type="submit" 
                value="Search" 
