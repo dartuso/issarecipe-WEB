@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
 
+
+<script>
+
+$(function(){
+   var arr = [];
+   $('#button').on('click', function(e){
+      e.preventDefault();
+      arr.push($('#searchBox').val());
+      $('#searchBox').val('');
+      $('#outputsearch').val(arr);
+   });
+});
+
+</script>
+
     <meta charset="utf-8" />
     <title>Issa Recipe</title>
 </head>
@@ -27,20 +42,25 @@
         <h1 class="col-md-8 text-center title">Issa Recipe</h1>
         <h2 class="col-md-8 text-center"> Your unused food, turned into an easy recipe! </h2>
     </div>
-<!--
+
     <div class="row">
         <form class="text-center col-md-12 search">
             <p> Search for recipes </p>
-            <div class="col-md-12">
-                <input type="text" value="Enter Ingredients" class="text-center">
-            </div>
+           
             <div class=" col-md-12 ">
-                <input type="submit" value="Submit " class="text-center submit">
+                 <input id='searchBox'  type='search' placeholder = "Enter ingredients" />
+             
+                <input id='button' type='submit' value='Submit' />
+                <label>
+                Previous entries:<input id='outputsearch' type='text' value="" />
+                </label>
             </div>
 
         </form>
     </div>
--->
+
+
+ <div class="row">
     <form action="http://www.recipepuppy.com/" 
           method="get" 
           style="font-size:10px;">
@@ -53,9 +73,8 @@
                name="i" 
                
                id="i" 
-               
-               value="Enter ingredients separated by commas" 
-               
+              value="Enter ingredients separated by commas" 
+             
                size=31 
                
                style="color:gray;font-size:11px;" 
@@ -65,6 +84,7 @@
                onblur="if(this.value=='')
                        {this.style.color='gray';this.value='Enter ingredients separated by commas';}" 
                />
+               
         <input type="submit" 
                value="Search" 
                style="font-size:11px;" />
@@ -73,6 +93,8 @@
         <a href="http://www.recipepuppy.com" style="font-size:10px;">
             Recipe Puppy
         </a>
+
+         </div>
     </form>
 </body>
 
