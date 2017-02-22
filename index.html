@@ -16,21 +16,8 @@
 
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
-
-
-<script>
-
-$(function(){
-   var arr = [];
-   $('#button').on('click', function(e){
-      e.preventDefault();
-      arr.push($('#searchBox').val());
-      $('#searchBox').val('');
-      $('#outputsearch').val(arr);
-   });
-});
-
-</script>
+    
+    <script type="text/javascript" src="main.js"></script>
 
     <meta charset="utf-8" />
     <title>Issa Recipe</title>
@@ -44,7 +31,14 @@ $(function(){
     </div>
 
     <div class="row">
-       
+        <form class="text-center col-md-12 search">
+            <p> Simply input a list of ingredients and make something delicous! </p>
+           
+            <div class=" col-md-12 ">
+             
+            </div>
+
+        </form>
     </div>
 
 
@@ -53,9 +47,11 @@ $(function(){
           method="get" 
           style="font-size:10px;text-align:center;"
           >
-        <b style="font-size:20px;">
+        <b style="font-size:25px;">
             Recipe Search by Ingredients:<br>
         </b>
+
+        <div class="col col-md-12">
         <input 
                 type='search'
                
@@ -74,9 +70,17 @@ $(function(){
                        {this.style.color='gray';this.value='Enter ingredients separated by commas';}" 
                 />
                
-        <input type="submit" 
-               value="Search" 
-               style="font-size:18px;" />
+        <input id='button' 
+            type="submit" 
+                value="Search" 
+                style="font-size:15px;" />
+
+           
+
+        </div>
+              
+               
+
         <br/>
         Powered by 
         <a href="http://www.recipepuppy.com" style="font-size:10px;">
