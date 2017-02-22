@@ -1,19 +1,13 @@
-body{
+body {
     background-image: url("background.jpg");
+    font-family: 'Barrio', cursive;
 }
 
 .title {
     margin-top: 100px;
-<<<<<<< HEAD
+    <<<<<<< HEAD
 }
 
 .logo {
     margin-left: 100px;
-}
-
-body {
-    font-family: 'Barrio', cursive;
-=======
-
->>>>>>> origin/master
 }
