@@ -44,40 +44,29 @@ $(function(){
     </div>
 
     <div class="row">
-        <form class="text-center col-md-12 search">
-            <p> Search for recipes </p>
-           
-            <div class=" col-md-12 ">
-                 <input id='searchBox'  type='search' placeholder = "Enter ingredients" />
-             
-                <input id='button' type='submit' value='Submit' />
-                <label>
-                Previous entries:<input id='outputsearch' type='text' value="" />
-                </label>
-            </div>
-
-        </form>
+       
     </div>
 
 
  <div class="row">
     <form action="http://www.recipepuppy.com/" 
           method="get" 
-          style="font-size:10px;text-align:center;" >
+          style="font-size:10px;text-align:center;"
+          >
         <b style="font-size:20px;">
             Recipe Search by Ingredients:<br>
         </b>
         <input 
-                type="search" 
+                type='search'
                
                 name="i" 
                
-                id="i" 
+                id="searchBox" 
                 placeholder="Enter ingredients separated by commas" 
              
                 size=31 
                
-                style="color:gray;font-size:11px;width:40%;height: 50px;" 
+            
                
                 onfocus="if(this.style.color=='gray'){this.style.color='black';this.value='';}"
                
@@ -87,7 +76,7 @@ $(function(){
                
         <input type="submit" 
                value="Search" 
-               style="font-size:11px;" />
+               style="font-size:18px;" />
         <br/>
         Powered by 
         <a href="http://www.recipepuppy.com" style="font-size:10px;">
