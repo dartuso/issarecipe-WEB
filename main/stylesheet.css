@@ -11,3 +11,8 @@ body {
 .logo {
     margin-left: 100px;
 }
+
+.search {
+    margin-top: 50px;
+    font-size: 30px;
+}
