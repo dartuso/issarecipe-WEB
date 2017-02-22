@@ -13,9 +13,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <!--    <script src="main.js"></script> -->
+ <script>
+       var arr = [];
+     $(document).ready(function(){
+      $('#button').on('click', function (e) {
+          e.preventDefault();
+          arr.push($('#searchBox').val());
+          $('#searchBox').val('');
+          $('#outputsearch').val(arr);
+      });
+     });
+ </script>
+     
 
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+  
 
     <meta charset="utf-8" />
     <title>Issa Recipe</title>
@@ -31,15 +45,31 @@
     <div class="row">
         <form class="text-center col-md-12 search">
             <p> Search for recipes </p>
-            <div class="col-md-12">
-                <input type="text" value="Enter Ingredients" class="text-center">
-            </div>
+            
             <div class=" col-md-12 ">
+          <!--      <img src= "ic_search_black_24dp_2x.png"> </img>
                 <input type="submit" value="Submit " class="text-center submit">
+
+                </!-->
+                
+                <input id='searchBox'  type='search' placeholder = "Enter ingredients" />
+             
+                <input id='button' type='submit' value='Submit' />
+                <label>
+                Previous entries:<input id='outputsearch' type='text' value="" />
+                </label>
+
+    
             </div>
 
+
+
         </form>
+
+        
     </div>
+
+
 </body>
 
 </html>
